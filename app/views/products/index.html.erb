@@ -1,0 +1,8 @@
+<h1>Products</h1>
+
+<% @products.each do |product| %>
+  <p><%= product.code %></p>
+  <p><%= product.description %></p>
+  <p><%= product.features %></p>
+  <p><%= image_tag product.main_image unless product.main_image.nil? %></p>
+<% end %>

@@ -12,7 +12,7 @@ puts "5 categories created"
     code: "Product_code_#{product}",
     description: "Description #{product}",
     features: "Feature A#{product}\nFeature B#{product}",
-    main_image: "http://placehold.it/600x400"
+    main_image: "http://placehold.it/300x200"
   )
 end
 
