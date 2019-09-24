@@ -1,0 +1,9 @@
+<%= image_tag @product.main_image unless @product.main_image.nil? %></p>
+
+<h1><%= @product.code %></h1>
+<p>
+[Description]<br>
+<%= @product.description %>
+<br><br>
+[Features]<br>
+<%= @product.features.gsub(/\n/,"<br>").html_safe %></p>

@@ -1,9 +1,9 @@
 <h1>Products</h1>
 <%= link_to "Create new product", new_product_path %>
 <% @products.each do |product| %>
-  <p><%= product.code %></p>
+  <p><%= link_to product.code, product_path(product) %></p>
   <p><%= product.description %></p>
   <p><%= product.features %></p>
   <p><%= image_tag product.main_image unless product.main_image.nil? %></p>
-  <p><%= link_to "Edit", edit_product_path(product.id) %>
+  <p><%= link_to "Edit", edit_product_path(product) %>
 <% end %>
