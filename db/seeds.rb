@@ -1,19 +1,20 @@
-5.times do |category|
+3.times do |category|
   Category.create!(
     title: "Category #{category}",
     sub_category: "Sub category #{category}"
   )
 end
 
-puts "5 categories created"
+puts "#{Category.all.length} categories created"
 
 9.times do |product|
   Product.create!(
     code: "Product_code_#{product}",
     description: "Description #{product}",
     features: "Feature A#{product}\nFeature B#{product}",
-    main_image: "http://placehold.it/300x200"
+    main_image: "http://placehold.it/300x200",
+    category_id: Category.last.id
   )
 end
 
-puts "9 products created"
+puts "#{Product.all.length} products created"
