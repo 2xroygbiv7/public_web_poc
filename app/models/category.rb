@@ -1,4 +1,4 @@
 class Category < ApplicationRecord
-  validates_presence_of :title, :sub_category
+  validates_presence_of :title, :parent
   has_many :products
 end
