@@ -1,4 +1,5 @@
 class Product < ApplicationRecord
+  include Placeholder
   validates :code, presence: true
   belongs_to :category
   
@@ -11,6 +12,6 @@ class Product < ApplicationRecord
   after_initialize :set_defaults
 
   def set_defaults
-    self.main_image ||= "http://placehold.it/150x100"
+    self.main_image ||= Placeholder.image_generator(height: 150,width: 100)
   end
 end
