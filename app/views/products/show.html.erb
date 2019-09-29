@@ -7,3 +7,10 @@
 <br><br>
 [Features]<br>
 <%= @product.features.gsub(/\n/,"<br>").html_safe %></p>
+[Category]<br>
+<%= @product.category.title %><br>
+<%= @product.category.parent %><br><br>
+[Badges]<br>
+<% @product.badges.each do |b| %>
+  <%= b.title %><br>
+<% end %>
