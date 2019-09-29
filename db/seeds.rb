@@ -52,3 +52,23 @@ product_list = [
  end
  
  puts "#{Product.all.length} products created"
+
+ badge_list = [
+   ["recycology",
+    Product.find_by(code: "BL107").id
+   ],
+   ["no_pvc",
+    Product.find_by(code: "N50").id
+   ],
+   ["refillable",
+    Product.find_by(code: "BL107").id
+   ]
+]
+badge_list.each do |title,id|
+  Badge.create!(
+    title: title,
+    product_id: id
+  )
+end
+
+ puts "#{Badge.all.length} badges created"

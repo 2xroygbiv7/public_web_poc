@@ -1,5 +1,6 @@
 class Product < ApplicationRecord
   include Placeholder
+  has_many :badges
   validates :code, presence: true
   belongs_to :category
   
