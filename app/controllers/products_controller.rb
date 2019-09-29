@@ -5,12 +5,11 @@ class ProductsController < ApplicationController
   
   def new
     @product = Product.new
+    3.times { @product.badges.build }
   end
 
   def create
-byebug    
-    @product = Product.new(params.require(:product).permit(:code, :description, :features, :main_image))
-byebug
+    @product = Product.new(params.require(:product).permit(:code, :description, :features, :main_image, :category_id, badges_attributes: [:title]))
     respond_to do |format|
       if @product.save
         format.html { redirect_to products_path, notice: 'Your product is now live.' }

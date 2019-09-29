@@ -1,6 +1,7 @@
 class Product < ApplicationRecord
-  include Placeholder
+  # include Placeholder
   has_many :badges
+  accepts_nested_attributes_for :badges, reject_if: lambda { |attrs| attrs['title'].blank? }
   validates :code, presence: true
   belongs_to :category
   
@@ -9,7 +10,7 @@ class Product < ApplicationRecord
     where(id: pens)
   end
   scope :markers, -> { where(id: Category.where(parent: "marker").ids) }
-  
+
   after_initialize :set_defaults
 
   def set_defaults
