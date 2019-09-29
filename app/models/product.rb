@@ -7,4 +7,10 @@ class Product < ApplicationRecord
     where(id: pens)
   end
   scope :markers, -> { where(id: Category.where(parent: "marker").ids) }
+  
+  after_initialize :set_defaults
+
+  def set_defaults
+    self.main_image ||= "http://placehold.it/150x100"
+  end
 end

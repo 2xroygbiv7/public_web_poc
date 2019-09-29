@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   def index
-    @products = Product.all
+    @products = Product.markers
   end
   
   def new
@@ -8,8 +8,9 @@ class ProductsController < ApplicationController
   end
 
   def create
+byebug    
     @product = Product.new(params.require(:product).permit(:code, :description, :features, :main_image))
-
+byebug
     respond_to do |format|
       if @product.save
         format.html { redirect_to products_path, notice: 'Your product is now live.' }
