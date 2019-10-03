@@ -8,6 +8,7 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 
+require('jquery')
 
 import '../stylesheets/application'
 import './bootstrap_custom.js'
@@ -19,4 +20,4 @@ import './bootstrap_custom.js'
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-console.log('Hello World from Webpacker');
+//console.log('Hello World from Webpacker');
