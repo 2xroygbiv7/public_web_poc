@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :products, except: [:show]
   get 'product/:id', to: 'products#show', as: 'product_show'
   
