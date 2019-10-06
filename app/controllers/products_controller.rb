@@ -9,7 +9,7 @@ class ProductsController < ApplicationController
   end
 
   def create
-    @product = Product.new(params.require(:product).permit(:code, :description, :features, :main_image, :category_id, badges_attributes: [:title]))
+    @product = Product.new(product_params)
     respond_to do |format|
       if @product.save
         format.html { redirect_to products_path, notice: 'Your product is now live.' }
@@ -26,7 +26,7 @@ class ProductsController < ApplicationController
   def update
     @product = Product.find(params[:id])
     respond_to do |format|
-      if @product.update(params.require(:product).permit(:code, :description, :features, :main_image))
+      if @product.update(product_params)
         format.html { redirect_to products_path, notice: 'Product was successfully updated.' }
       else
         format.html { render :edit }
@@ -49,5 +49,11 @@ class ProductsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to products_url, notice: 'Record was removed.' }
     end
+  end
+
+  private
+
+  def product_params
+    params.require(:product).permit(:code, :description, :features, :main_image, :category_id, badges_attributes: [:title])
   end
 end
