@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   def index
     @products = Product.all
+    @page_title = "Products"
   end
   
   def new
@@ -36,6 +37,8 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
+    @page_title = @product.code
+    @seo_keywords = @product.description
   end
 
   def destroy
