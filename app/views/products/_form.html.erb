@@ -1,0 +1,38 @@
+<%= form_for(@product) do |f| %>
+  <div class="field"
+    <%= f.label :code %>
+    <%= f.text_field :code %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :features %>
+    <%= f.text_area :features %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :main_image %>
+    <%= f.text_area :main_image %>
+  </div>
+
+  <div class field>
+    <%= f.label :category_id %> (has to be a number for category_id)
+    <%= f.text_area :category_id %>
+  </div>
+  <ul>
+    <%= f.fields_for :badges do |badge_form| %>
+      <li>
+        <%= badge_form.label :title %>
+        <%= badge_form.text_field :title %>
+      </li>
+    <% end %>
+  </ul>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
