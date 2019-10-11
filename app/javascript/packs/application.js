@@ -11,6 +11,8 @@ require("channels")
 require('jquery')
 
 import '../stylesheets/application'
+//import '../stylesheets/product'
+
 import './bootstrap_custom.js'
 
 // Uncomment to copy all static images under ../images to the output folder and reference
@@ -21,3 +23,5 @@ import './bootstrap_custom.js'
 // const imagePath = (name) => images(name, true)
 
 console.log('Hello World from Webpacker');
+require("packs/test.js")
+
