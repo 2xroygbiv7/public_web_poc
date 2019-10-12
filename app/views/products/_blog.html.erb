@@ -1,7 +1,0 @@
-
-  <p><%= link_to product.code, product_show_path(product) %></p>
-  <p><%= product.description %></p>
-  <p><%= product.features %></p>
-  <p><%= image_tag product.main_image unless product.main_image.nil? %></p>
-  <p><%= link_to "Edit", edit_product_path(product) %>
-  <%= link_to 'Delete', product_path(product), method: :delete, data: { confirm: 'Are you sure?' } %>
