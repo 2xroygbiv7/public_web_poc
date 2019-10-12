@@ -1,5 +1,7 @@
 class ProductsController < ApplicationController
   layout "product"
+  access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
+
   def index
     @products = Product.all
     @page_title = "Products"
