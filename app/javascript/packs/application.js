@@ -11,7 +11,7 @@ require("channels")
 require('jquery')
 
 import '../stylesheets/application'
-//import '../stylesheets/product'
+import '../stylesheets/products'
 
 import './bootstrap_custom.js'
 
