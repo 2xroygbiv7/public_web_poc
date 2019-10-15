@@ -16,7 +16,7 @@
       <%= render "shared/application_nav" %>
       <!-- end fo navigation -->
       <!-- start of masthead -->
-      <%= render "shared/product_masthead" %>
+      <%= render "shared/product_masthead" unless logged_in?(:site_admin)%>
       <!-- end of masthead -->
       <%= yield %>
       <!-- start of footer -->
