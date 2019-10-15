@@ -6,30 +6,23 @@
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <meta name="keywords" content="<%= @seo_keywords %>" />
-
     <%= stylesheet_pack_tag 'products', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'products', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body class="text-center">
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-    
-  <!-- start of navigation  -->
-  <%= render "shared/application_nav" %>
-  <!-- end fo navigation -->
-  <!-- start of masthead -->
-  <%= render "shared/product_masthead" %>
-  <!-- end of masthead -->
-  <%= yield %>
-  <!-- start of footer -->
-
-  <%= render "shared/application_footer" %>
-  <!-- end of footer -->
-
-    <%= source_helper("product") %>
+      <!-- start of navigation  -->
+      <%= render "shared/application_nav" %>
+      <!-- end fo navigation -->
+      <!-- start of masthead -->
+      <%= render "shared/product_masthead" %>
+      <!-- end of masthead -->
+      <%= yield %>
+      <!-- start of footer -->
+      <%= render "shared/application_footer" %>
+      <!-- end of footer -->
+      <%= source_helper("product") %>
     </div>
-
   </body>
 </html>
