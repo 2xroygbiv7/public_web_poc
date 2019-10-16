@@ -10,6 +10,8 @@ require("channels")
 
 require('jquery')
 
+require("packs/test.js")
+
 import '../stylesheets/application'
 //import '../stylesheets/products'
 import './bootstrap_custom.js'
@@ -22,5 +24,13 @@ import './bootstrap_custom.js'
 // const imagePath = (name) => images(name, true)
 
 console.log('Hello World from Webpacker');
-require("packs/test.js")
 
+$(document).ready(function(){
+  if (jQuery) {
+    //jQuery is loaded  
+    console.log("Yeah! JQuery is loaded.");
+  } else {
+    // jQuery is not loaded
+    console.log("JQuery is not loaded.");
+  }
+});
