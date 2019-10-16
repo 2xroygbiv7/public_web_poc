@@ -23,3 +23,10 @@ import '../stylesheets/products'
 
 console.log('Hello World from products layout!');
 
+ready = undefined
+
+ready = ->
+  $('.sortable').sortable()
+  return
+
+$(document).ready
