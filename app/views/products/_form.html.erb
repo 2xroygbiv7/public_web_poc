@@ -1,38 +1,38 @@
 <%= form_for(@product) do |f| %>
-  <div class="form_group"
+  <div class="field"
     <%= f.label :code %>
-    <%= f.text_field :code, class: 'form-control' %>
+    <%= f.text_field :code %>
   </div>
 
-  <div class="field form_group">
+  <div class="field">
     <%= f.label :description %>
-    <%= f.text_field :description, class: 'form-control'  %>
+    <%= f.text_field :description %>
   </div>
 
-  <div class="field form_group">
+  <div class="field">
     <%= f.label :features %>
-    <%= f.text_area :features, class: 'form-control'  %>
+    <%= f.text_area :features %>
   </div>
-
-  <div class="field form_group">
+  
+  <div class="field">
     <%= f.label :main_image %>
-    <%= f.text_area :main_image, class: 'form-control'  %>
+    <%= f.text_area :main_image %>
   </div>
 
-  <div class="field form-group">
+  <div class field>
     <%= f.label :category_id %> (has to be a number for category_id)
-    <%= f.text_area :category_id, class: 'form-control'  %>
+    <%= f.text_area :category_id %>
   </div>
-  <div class="field form-group">
+  <ul>
     <%= f.fields_for :badges do |badge_form| %>
-      <div class="field form_group">
+      <li>
         <%= badge_form.label :title %>
         <%= badge_form.text_field :title %>
-      </div>
+      </li>
     <% end %>
-  </div>
+  </ul>
 
-  <div class="actions form-group">
+  <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>

@@ -11,7 +11,8 @@ require("channels")
 require('jquery')
 
 import '../stylesheets/application'
-//import '../stylesheets/products'
+//import '../stylesheets/product'
+
 import './bootstrap_custom.js'
 
 // Uncomment to copy all static images under ../images to the output folder and reference
