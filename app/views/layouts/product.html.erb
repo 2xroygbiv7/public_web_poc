@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <meta name="keywords" content="<%= @seo_keywords %>" />
-
-    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'products', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'products', 'data-turbolinks-track': 'reload' %>
   </head>
-
-  <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    This is the Product Layout <br>
-    <%= login_helper %>
-    <%= yield %>
-
-    <%= render 'shared/nav', location: 'top' %>
-
-    <%= source_helper("product") %>
+  <body class="text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <!-- start of navigation  -->
+      <%= render "shared/application_nav" %>
+      <!-- end fo navigation -->
+      <!-- start of masthead -->
+      <%= render "shared/product_masthead" unless logged_in?(:site_admin)%>
+      <!-- end of masthead -->
+      <%= yield %>
+      <!-- start of footer -->
+      <%= render "shared/application_footer" %>
+      <!-- end of footer -->
+      <%= source_helper("product") %>
+    </div>
   </body>
 </html>
