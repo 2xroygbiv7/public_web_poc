@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-7">
-      <%= image_tag @product.main_image.url, width: '100%' unless @product.main_image.nil? %></p>
+      <%= image_tag product_img(@product.main_image, 'main') %>
     </div>
     <div class="col-md-5">
       <h1><%= @product.code %></h1>

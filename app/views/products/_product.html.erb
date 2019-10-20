@@ -1,7 +1,7 @@
 <div class="col-md-4">
   <div class="card mb-4 shadow-sm">
     <div class="card-body">
-      <p><%= image_tag product.main_image.to_s unless product.main_image.nil? %></p>
+      <p><%= image_tag product_img(product.main_image, 'main') %></p>
       <div class="card-text">
         <span><%= product.description %></span>
         <p><%= link_to product.code, product_show_path(product) %></p>
