@@ -1,32 +1,35 @@
-// This file is automatically compiled by Webpack, along with any other files
-// present in this directory. You're encouraged to place your actual application logic in
-// a relevant structure within app/javascript and only use these pack files to reference
-// that code so it'll be compiled.
-
-require("@rails/ujs").start()
-require("turbolinks").start()
-require("@rails/activestorage").start()
-require("channels")
-
-require('jquery')
-
-//import '../stylesheets/application'
-import '../stylesheets/products'
-//import './bootstrap_custom.js'
-
-// Uncomment to copy all static images under ../images to the output folder and reference
-// them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
-// or the `imagePath` JavaScript helper below.
+//require("@rails/ujs").start()
+//require("turbolinks").start()
+//require("@rails/activestorage").start()
+//require("channels")
 //
-// const images = require.context('../images', true)
-// const imagePath = (name) => images(name, true)
+//require('jquery')
 
-console.log('Hello World from products layout!');
+//require ("packs/html_sortable.js")
+import '../stylesheets/products'
+console.log('Hello from products layout!');
 
-ready = undefined
+//ready = undefined
+//ready = ->
+//  $('.sortable').sortable()
+//  return
+//
+//$(document).ready
+//
 
-ready = ->
-  $('.sortable').sortable()
-  return
-
-$(document).ready
+//var ready = function() {
+//  $(".sortable").sortable();
+//};
+//
+//$(document).ready(function(){
+//  //$(".sortable").css("border", "13px solid red");
+//  //$(".sortable").sortable();
+//  alert(1);
+//  ready;
+//});
+//$(document).ready(function(){
+//    $('.sortable').sortable();
+//});
+//$(document).on( 'turbolinks:load', function(){
+//      $('.sortable').sortable();
+//});

@@ -1,3 +1,5 @@
+console.log("Hello from html_sortable.js");
+
 ;(function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     define([], factory);

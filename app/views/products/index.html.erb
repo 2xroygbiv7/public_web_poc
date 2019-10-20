@@ -2,10 +2,7 @@
   <div class="container">
     <%= link_to "Create new product", new_product_path if logged_in?(:site_admin) %>
     <div class="row sortable">
-      <div class="row">
-
         <%= render @products %>
-      </div>
     </div>
   </div>
 </div>

@@ -60,6 +60,11 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:code, :description, :features, :main_image, :category_id, badges_attributes: [:title])
+    params.require(:product).permit(:code, 
+                                    :description, 
+                                    :features, 
+                                    :main_image, 
+                                    :category_id, 
+                                    badges_attributes: [:title])
   end
 end

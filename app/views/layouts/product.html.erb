@@ -7,8 +7,10 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta name="keywords" content="<%= @seo_keywords %>" />
+
     <%= stylesheet_pack_tag 'products', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'products', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'html_sortable', 'data-turbolinks-track': 'reload' %>
   </head>
   <body class="text-center">
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">

@@ -57,3 +57,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'friendly_id', '~> 5.1'
 gem 'devise', '~> 4.2'
 gem 'petergate', '~> 2.0', '>= 2.0.1'
+gem 'carrierwave', '~> 0.11.2'
+gem 'mini_magick', '~> 4.5', '>= 4.5.1'
+gem 'carrierwave-aws', '~> 1.0'
+gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'

@@ -1,10 +1,12 @@
 class Product < ApplicationRecord
-  # include Placeholder
+  include Placeholder
   has_many :badges
   accepts_nested_attributes_for :badges, reject_if: lambda { |attrs| attrs['title'].blank? }
   validates :code, presence: true
   belongs_to :category
-  
+
+  mount_uploader :main_image, ProductUploader
+
   def self.pens
     pens = Category.where(parent: "pen").ids
     where(id: pens)
