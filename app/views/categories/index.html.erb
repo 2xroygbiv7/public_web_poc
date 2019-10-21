@@ -1,0 +1,8 @@
+<div class="album py-5 bg-light">
+  <div class="container">
+    <%= link_to "Create new category", new_product_path if logged_in?(:site_admin) %>
+    <div class="row sortable">
+        <%= render @categories %>
+    </div>
+  </div>
+</div>
